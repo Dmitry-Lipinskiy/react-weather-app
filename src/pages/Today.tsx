@@ -1,9 +1,12 @@
 import React from 'react';
+import WeatherToday from '../components/weather/WeatherToday';
 
 const Today = () => {
 
   return (
-    <div>Today</div>
+    <div>
+      <WeatherToday/>
+    </div>
   )
 
 }

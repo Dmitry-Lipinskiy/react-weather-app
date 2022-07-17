@@ -1,21 +1,18 @@
-import React, { useState } from 'react';
-import http from '../../http';
+import React, { useEffect, useState } from 'react';
+import { useActions } from '../../hooks/useActions';
 import './header.css'
-
-const API_KEY = "1c99c168e5f32cae7dc01015c0038525";
-let lang: string = "en";
-let city: any = "";
 
 const Header = () => {
 
-  const [value, setValue] = useState<any>(city);
+  const [value, setValue] = useState<string>('');
 
-  const getWeatherToday = (city: any) => {
-    http.get(`weather?q=${city}&limit=1&appid=${API_KEY}&units=metric&lang=${lang}`).then(res => {
-      setValue("");
-      console.log(res);
-    }).catch(err => console.log(err));
-  }
+  const {getWeatherToday} = useActions();
+
+  // useEffect(() => {
+  //   getWeatherToday(city);
+  // }, []);
+
+  // getWeatherToday(city);
 
   return (
     <div className='header-container'>
