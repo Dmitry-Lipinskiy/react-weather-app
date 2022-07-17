@@ -1,18 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { useActions } from '../../hooks/useActions';
-import './header.css'
+import './header.css';
+
+let city: any = "Minsk";
 
 const Header = () => {
 
-  const [value, setValue] = useState<string>('');
+  const [value, setValue] = useState<any>();
 
   const {getWeatherToday} = useActions();
+  const {getWeatherFiveDays} = useActions();
 
-  // useEffect(() => {
-  //   getWeatherToday(city);
-  // }, []);
+  useEffect(() => {
+    getWeatherFiveDays(city);
+  }, []);
 
-  // getWeatherToday(city);
+  useEffect(() => {
+    getWeatherToday(city);
+  }, []);
 
   return (
     <div className='header-container'>
@@ -26,7 +31,7 @@ const Header = () => {
         />
         <button type="button" 
           className="btn btn-success" 
-          onClick={() => getWeatherToday(value)}
+          onClick={() => (getWeatherToday(value), getWeatherFiveDays(value))}
         >Search</button>
         <button type="button" className="btn btn-primary">Sing in</button>
       </div>

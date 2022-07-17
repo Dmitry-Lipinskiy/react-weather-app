@@ -1,18 +1,10 @@
-import React, { useEffect } from 'react';
-import { useActions } from '../../hooks/useActions';
+import React from 'react';
 import { useTypedSelector } from '../../hooks/useTypedSelectors';
 import './weatherToday.css';
-
-let city: any = "Minsk";
 
 const WeatherToday = () => {
 
   const {today} = useTypedSelector(state => state.today);
-  const {getWeatherToday} = useActions();
-
-  useEffect(() => {
-    getWeatherToday(city);
-  }, []);
 
   return (
     <div className="weather-today-container">
@@ -23,7 +15,7 @@ const WeatherToday = () => {
       <div className="weather-today-container-info">
         <div>
           {/* <img src={today.weather[0].icon} alt=""> */}
-          {/* <div>{today.weather[0].description}.</div> */}
+          {/* <div>{today.weather[0].description}</div> */}
         </div>
         <div>
           {/* <div className="info-air-temperature">{today.main.temp}<sup>o</sup>C</div> */}

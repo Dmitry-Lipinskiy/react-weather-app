@@ -10,7 +10,7 @@ export enum WeatherTodayActionType {
 
 interface GetWeatherTodayAction {
   type: WeatherTodayActionType.GET_WEATHER_TODAY;
-  payload: any;
+  payload: IWeatherToday;
 }
 
 export type WeatherTodayAction = GetWeatherTodayAction;

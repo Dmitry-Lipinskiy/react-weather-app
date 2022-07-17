@@ -1,9 +1,16 @@
 import React from 'react';
+import WeatherFiveDaysCards from '../components/weather/WeatherFiveDaysCards';
 
-const FiveDays = () => {
+const FiveDays = (
+  // {value}: {value: any}
+  ) => {
 
   return (
-    <div>FiveDays</div>
+    <div>
+      <WeatherFiveDaysCards 
+        // value={value}
+      />
+    </div>
   )
 
 }

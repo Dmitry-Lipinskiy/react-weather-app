@@ -2,7 +2,7 @@ import { IWeatherToday } from "../../components/weather/IWeatherToday";
 import { WeatherTodayAction, WeatherTodayActionType, WeatherTodayState } from "../types/weatherToday";
 
 const initialState: WeatherTodayState = {
-  today: <IWeatherToday>({})
+  today: <IWeatherToday>{}
 }
 
 export const weatherTodayReducer = (state = initialState, action: WeatherTodayAction): WeatherTodayState => {
