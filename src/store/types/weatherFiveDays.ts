@@ -1,7 +1,7 @@
-import { IWeatherFiveDays } from "../../components/weather/IWeatherFiveDays";
+import { IListForecast } from "../../components/weather/IWeatherFiveDays";
 
 export interface WeatherFiveDaysState {
-  days: IWeatherFiveDays;
+  days: IListForecast[];
 }
 
 export enum WeatherFiveDaysActionType {
@@ -10,7 +10,7 @@ export enum WeatherFiveDaysActionType {
 
 interface GetWeatherFiveDaysAction {
   type: WeatherFiveDaysActionType.GET_WEATHER_FIVE_DAYS;
-  payload: IWeatherFiveDays;
+  payload: IListForecast[];
 }
 
 export type WeatherFiveDaysAction = GetWeatherFiveDaysAction;

@@ -1,8 +1,8 @@
-import { IWeatherFiveDays } from "../../components/weather/IWeatherFiveDays";
+import { IListForecast, IWeatherFiveDays } from "../../components/weather/IWeatherFiveDays";
 import { WeatherFiveDaysAction, WeatherFiveDaysActionType, WeatherFiveDaysState } from "../types/weatherFiveDays";
 
 const initialState: WeatherFiveDaysState = {
-  days: <IWeatherFiveDays>{}
+  days: []
 }
 
 export const weatherFiveDaysReducer = (state = initialState, action: WeatherFiveDaysAction): WeatherFiveDaysState => {

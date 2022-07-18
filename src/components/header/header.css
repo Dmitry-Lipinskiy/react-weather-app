@@ -7,6 +7,11 @@
   align-items: center;
 }
 
+h2 {
+  color: MediumSeaGreen;
+  text-shadow: 1px 1px 2px black;
+}
+
 .header-options-block {
   min-width: 40%;
   display: flex;

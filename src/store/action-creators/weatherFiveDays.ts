@@ -8,7 +8,8 @@ const lang: string = "en";
 export const getWeatherFiveDays = (city: any) => {
   return async (dispatch: Dispatch<WeatherFiveDaysAction>) => {
     const response = await http.get(`forecast?q=${city}&appid=${API_KEY}&units=metric&lang=${lang}`);
-    dispatch({type: WeatherFiveDaysActionType.GET_WEATHER_FIVE_DAYS, payload: response.data})
-    console.log(response.data);
+    dispatch({type: WeatherFiveDaysActionType.GET_WEATHER_FIVE_DAYS, payload: response.data.list})
+    console.log(response.data.list);
   }
 }
+
