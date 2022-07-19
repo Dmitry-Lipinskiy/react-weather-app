@@ -6,7 +6,7 @@ let city: any = "Minsk";
 
 const Header = () => {
 
-  const [value, setValue] = useState<any>();
+  const [value, setValue] = useState('');
 
   const {getWeatherToday} = useActions();
   const {getWeatherFiveDays} = useActions();
