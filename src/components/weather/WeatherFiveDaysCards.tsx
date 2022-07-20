@@ -8,7 +8,6 @@ import './weatherFiveDaysCards.css';
 const WeatherFiveDaysCards = () => {
 
   const {showWeatherHourly} = useActions();
-
   const {days} = useTypedSelector(state => state.days);
 
   const showWeatherFiveDays = (days: any) => {
@@ -35,9 +34,9 @@ const WeatherFiveDaysCards = () => {
       <div className="forecast-container">
         {days.length ?
           showWeatherFiveDays(days).map((day) => (
-            <div className="forecast-block" key={day.dt_txt} onClick={() => showWeatherHourly(day, days)}>
+            <div className="forecast-block" key={day.dt} onClick={() => showWeatherHourly(day, days)}>
               <div className="forecast-week-day">{moment(day.dt * 1000 - 3 * 3600 * 1000).format('dddd')}</div>
-              <div className="forecast-date">{moment(day.dt * 1000).format('MMM DD')}</div>
+              <div className="forecast-date">{moment(day.dt * 1000 - 3 * 3600 * 1000).format('MMM DD')}</div>
               <div className="forecast-image"><img src={weatherIcon(day.weather[0].icon)} alt=""/></div>
               <div className="forecast-temperature">{Math.round(day.main.temp)}<sup>o</sup>C</div>
               <div className="forecast-description">{day.weather[0].description}</div>

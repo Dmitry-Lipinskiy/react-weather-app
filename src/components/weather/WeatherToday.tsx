@@ -42,7 +42,7 @@ const WeatherToday = () => {
                   </tr>
                   <tr>
                     <th scope='row'>Duration:</th>
-                    <td>{moment(today.sys.sunset * 1000 - today.sys.sunrise * 1000).format('HH:mm')} hr</td>
+                    <td>{moment((today.sys.sunset * 1000 - today.sys.sunrise * 1000) - 3 * 3600 * 1000).format('HH:mm')} hr</td>
                   </tr>
                   </tbody>
                 </table> 

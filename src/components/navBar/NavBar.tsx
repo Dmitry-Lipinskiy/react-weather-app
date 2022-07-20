@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useActions } from '../../hooks/useActions';
 import './navBar.css'
 
 const NavBar = () => {

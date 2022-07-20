@@ -1,15 +1,13 @@
 import React from 'react';
 import WeatherFiveDaysCards from '../components/weather/WeatherFiveDaysCards';
+import WeatherHourly from '../components/weather/WeatherHourly';
 
-const FiveDays = (
-  // {value}: {value: any}
-  ) => {
+const FiveDays = () => {
 
   return (
     <div>
-      <WeatherFiveDaysCards 
-        // value={value}
-      />
+      <WeatherFiveDaysCards />
+      <WeatherHourly />
     </div>
   )
 
