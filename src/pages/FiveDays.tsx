@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ModalWeatherHourly from '../components/modal/ModalWeatherHourly';
 import WeatherFiveDaysCards from '../components/weather/WeatherFiveDaysCards';
-import WeatherHourly from '../components/weather/WeatherHourly';
 
 const FiveDays = () => {
 
+  const [openWeatherHourlyModal, setOpenWeatherHourlyModal] = useState(false);
+
   return (
     <div>
-      <WeatherFiveDaysCards />
-      <WeatherHourly />
+      <WeatherFiveDaysCards setOpenWeatherHourlyModal={setOpenWeatherHourlyModal}/>
+      <ModalWeatherHourly 
+        openWeatherHourlyModal={openWeatherHourlyModal} 
+        setOpenWeatherHourlyModal={setOpenWeatherHourlyModal} 
+      />
     </div>
   )
 

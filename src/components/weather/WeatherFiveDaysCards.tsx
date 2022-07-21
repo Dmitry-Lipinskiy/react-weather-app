@@ -1,11 +1,14 @@
 import moment from 'moment';
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 import { useActions } from '../../hooks/useActions';
 import { useTypedSelector } from '../../hooks/useTypedSelectors';
 import Spinner from '../spinner/Spinner';
 import './weatherFiveDaysCards.css';
 
-const WeatherFiveDaysCards = () => {
+const WeatherFiveDaysCards = (
+    {setOpenWeatherHourlyModal}: 
+    {setOpenWeatherHourlyModal: Dispatch<SetStateAction<boolean>>}
+  ) => {
 
   const {showWeatherHourly} = useActions();
   const {days} = useTypedSelector(state => state.days);
@@ -34,7 +37,7 @@ const WeatherFiveDaysCards = () => {
       <div className="forecast-container">
         {days.length ?
           showWeatherFiveDays(days).map((day) => (
-            <div className="forecast-block" key={day.dt} onClick={() => showWeatherHourly(day, days)}>
+            <div className="forecast-block" key={day.dt} onClick={() => (showWeatherHourly(day, days), setOpenWeatherHourlyModal(true))}>
               <div className="forecast-week-day">{moment(day.dt * 1000 - 3 * 3600 * 1000).format('dddd')}</div>
               <div className="forecast-date">{moment(day.dt * 1000 - 3 * 3600 * 1000).format('MMM DD')}</div>
               <div className="forecast-image"><img src={weatherIcon(day.weather[0].icon)} alt=""/></div>
