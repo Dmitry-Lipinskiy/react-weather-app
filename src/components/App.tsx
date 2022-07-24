@@ -5,9 +5,11 @@ import AppRoutes from './router/AppRoutes';
 import Header from './header/Header';
 import NavBar from './navBar/NavBar';
 import Context from '../context/context';
+import ErrorModal from './modal/ErrorModal';
 
 function App() {
 
+  const [openErrorModal, setOpenErrorModal] = useState(false);
   const [isError, setIsError] = useState(false);
   
   return (
@@ -17,6 +19,7 @@ function App() {
           <Header />
           <NavBar />
           <AppRoutes />
+          <ErrorModal openErrorModal={isError} setOpenErrorModal={setOpenErrorModal} />
         </div>
       </BrowserRouter>
     </Context.Provider>

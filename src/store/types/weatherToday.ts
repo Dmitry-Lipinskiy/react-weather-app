@@ -5,7 +5,7 @@ export interface WeatherTodayState {
 }
 
 export enum WeatherTodayActionType {
-  GET_WEATHER_TODAY = 'GET_WEATHER_TODAY '
+  GET_WEATHER_TODAY = 'GET_WEATHER_TODAY'
 }
 
 interface GetWeatherTodayAction {

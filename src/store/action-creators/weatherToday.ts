@@ -1,5 +1,4 @@
 import { Dispatch } from "redux";
-import { setConstantValue } from "typescript";
 import http from "../../http";
 import { WeatherTodayAction, WeatherTodayActionType } from "../types/weatherToday";
 
@@ -11,6 +10,6 @@ export const getWeatherToday = (city: any) => {
     const response = await http.get(`weather?q=${city}&limit=1&appid=${API_KEY}&units=metric&lang=${lang}`).then(response => {
       dispatch({type: WeatherTodayActionType.GET_WEATHER_TODAY, payload: response.data});
       console.log(response.data);
-    }).catch(err => console.log(err));  
+    }).catch(err => console.log(err.response.data));  
   }
 }

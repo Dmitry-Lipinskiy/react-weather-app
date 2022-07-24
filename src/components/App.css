@@ -1,5 +1,11 @@
 .App {
+  width: 100%;
+  min-height: 100vh;
   text-align: center;
+  background-image: url('https://img.freepik.com/free-photo/cloudy-landscape-cumulus-haze-scenic_1232-3932.jpg?size=626&ext=jpg&ga=GA1.2.47286176.1658671610');
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
 }
 
 

@@ -1,6 +1,5 @@
 import { Dispatch } from "redux";
 import { IListForecast } from "../../components/weather/IWeatherFiveDays";
-import { useTypedSelector } from "../../hooks/useTypedSelectors";
 import { WeatherHourlyAction, WeatherHourlyActionType } from "../types/weatherHourly";
 
 export const showWeatherHourly = (day: any, days: IListForecast[]) => {
@@ -9,7 +8,6 @@ export const showWeatherHourly = (day: any, days: IListForecast[]) => {
     if (day.dt_txt.split(" ")[0] == time.dt_txt.split(" ")[0]) {
         weatherHourly.push(time);
     }
-    
   }
   return  (dispatch: Dispatch<WeatherHourlyAction>) => {
     dispatch({type: WeatherHourlyActionType.GET_WEATHER_HOURLY, payload: weatherHourly});

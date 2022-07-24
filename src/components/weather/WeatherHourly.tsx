@@ -13,7 +13,6 @@ const WeatherHourly = () => {
 
   return (
     <div className="container-weather-hourly">
-      <h2>HOURLY</h2>
       <div className="container-weather-hourly-info">
         {weatherHourly?.[0] &&
           <div className="block-weather-hourly-info-name">

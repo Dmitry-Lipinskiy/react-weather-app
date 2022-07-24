@@ -8,12 +8,12 @@
 }
 
 h2 {
-  color: MediumSeaGreen;
-  text-shadow: 1px 1px 2px black;
+  color: steelblue;
+  text-shadow: 2px 2px 3px black;
 }
 
 .header-options-block {
-  min-width: 40%;
+  min-width: 30%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -21,11 +21,13 @@ h2 {
 }
 
 .form-control {
-  max-width: 50%;
-  margin: 5px 0;
+  max-width: 60%;
+  margin: 5px;
 }
 
 .btn {
   margin: 5px;
+  background-color: steelblue;
+  color: white;
 }
 

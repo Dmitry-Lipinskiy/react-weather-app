@@ -1,18 +1,19 @@
 .forecast-container {
   width: 90%;
-  margin: 30px auto;
+  margin: 100px auto;
+  color: dimgrey;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 
 .forecast-block {
   width: 150px;
-  margin: 10px 0;
+  margin: 10px 5px;
   padding: 20px 10px;
-  border: 2px solid MediumSeaGreen;
+  border: 2px solid steelblue;
   border-radius: 7px;
   box-shadow: 0 0 5px 3px dimgrey;
   display: flex;
@@ -22,25 +23,26 @@
 }
 
 .forecast-block:hover {
-  transform: translate(0px, 7px);
+  transform: translate(10px, 15px);
 }
 
 .forecast-week-day {
-  color: MediumSeaGreen;
-  font-weight: bold;
+  color: steelblue;
+  font-weight: bolder;
+  text-shadow: 1px 1px black;
 }
 
 .forecast-date {
-  color: dimgrey;
+  /* color: dimgrey; */
   padding-top: 10px;
 }
 
 .forecast-temperature {
-  color: dimgrey;
+  /* color: dimgrey; */
   font-size: 30px;
 }
 
 .forecast-description {
-  color: grey;
+  /* color: dimgrey; */
   padding-top: 10px;
 }

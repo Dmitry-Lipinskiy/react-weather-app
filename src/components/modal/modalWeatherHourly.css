@@ -1,0 +1,12 @@
+.modal-content {
+  color: dimgrey;
+  background-image: url('https://img.freepik.com/free-vector/light-blue-sky-with-white-clouds-realistic-background-natural-banner-with-heavens_33099-624.jpg?size=626&ext=jpg&ga=GA1.2.47286176.1658671610');
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+}
+
+.modal-title {
+  color: steelblue;
+  text-shadow: 2px 2px 3px black;
+}

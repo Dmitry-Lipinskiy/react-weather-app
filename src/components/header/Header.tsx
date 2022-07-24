@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import Context from '../../context/context';
 import { useActions } from '../../hooks/useActions';
 import './header.css';
 
@@ -7,16 +8,17 @@ let city: any = "Minsk";
 const Header = () => {
 
   const [value, setValue] = useState('');
-
+  const { isError } = useContext(Context);
+ 
   const {getWeatherToday} = useActions();
   const {getWeatherFiveDays} = useActions();
 
   useEffect(() => {
-    getWeatherFiveDays(city);
+    getWeatherFiveDays(city)
   }, []);
 
   useEffect(() => {
-    getWeatherToday(city);
+      getWeatherToday(city);
   }, []);
 
   return (
@@ -30,10 +32,9 @@ const Header = () => {
           onChange={(event) => setValue(event.target.value)}
         />
         <button type="button" 
-          className="btn btn-success" 
+          className="btn" 
           onClick={() => (getWeatherToday(value), getWeatherFiveDays(value))}
         >Search</button>
-        <button type="button" className="btn btn-primary">Sing in</button>
       </div>
     </div>
   )

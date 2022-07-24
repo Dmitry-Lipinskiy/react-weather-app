@@ -17,8 +17,8 @@ const WeatherToday = () => {
       {today?.weather ? 
         <div className="weather-today-container">
           <div className="weather-today-container-header">
-            <div>CURRENT WEATHER</div>
-            <div>{moment(today.dt * 1000).format('DD.MM.YYYY')}</div>
+            <h4>CURRENT WEATHER</h4>
+            <h4>{moment(today.dt * 1000).format('DD.MM.YYYY')}</h4>
           </div>
           <div className="weather-today-container-info">
             <div>
@@ -29,24 +29,24 @@ const WeatherToday = () => {
               <div className="info-air-temperature">{Math.round(today.main.temp)}<sup>o</sup>C</div>
               <div>Real Feel {Math.round(today.main.feels_like)}<sup>o</sup></div>
             </div>
-              <div>
-                <table>
-                  <tbody>
-                  <tr>
-                    <th scope='row'>Sunrise:</th>
-                    <td>{moment(today.sys.sunrise * 1000).format('HH:mm')}</td>
-                  </tr>
-                  <tr>
-                    <th scope='row'>Sunset:</th>
-                    <td>{moment(today.sys.sunset * 1000).format('HH:mm')}</td>
-                  </tr>
-                  <tr>
-                    <th scope='row'>Duration:</th>
-                    <td>{moment((today.sys.sunset * 1000 - today.sys.sunrise * 1000) - 3 * 3600 * 1000).format('HH:mm')} hr</td>
-                  </tr>
-                  </tbody>
-                </table> 
-              </div>
+            <div>
+              <table>
+                <tbody>
+                <tr>
+                  <th scope='row'>Sunrise:</th>
+                  <td>{moment(today.sys.sunrise * 1000).format('HH:mm')}</td>
+                </tr>
+                <tr>
+                  <th scope='row'>Sunset:</th>
+                  <td>{moment(today.sys.sunset * 1000).format('HH:mm')}</td>
+                </tr>
+                <tr>
+                  <th scope='row'>Duration:</th>
+                  <td>{moment((today.sys.sunset * 1000 - today.sys.sunrise * 1000) - 3 * 3600 * 1000).format('HH:mm')} hr</td>
+                </tr>
+                </tbody>
+              </table> 
+            </div>
           </div>
         </div>
         :

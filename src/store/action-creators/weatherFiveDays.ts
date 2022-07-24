@@ -10,7 +10,7 @@ export const getWeatherFiveDays = (city: any) => {
     const response = await http.get(`forecast?q=${city}&appid=${API_KEY}&units=metric&lang=${lang}`).then(response => {
       dispatch({type: WeatherFiveDaysActionType.GET_WEATHER_FIVE_DAYS, payload: response.data.list});
       console.log(response.data.list);
-    }).catch(err => console.log(err));
+    }).catch(err => console.log(err.response.data));
   }
 }
 

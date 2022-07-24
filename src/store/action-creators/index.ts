@@ -5,5 +5,5 @@ import * as WeatherHourlyActionCreators from "./weatherHourly";
 export default {
   ...WeatherTodayActionCreators,
   ...WeatherFiveDaysActionCreators,
-  ...WeatherHourlyActionCreators
+  ...WeatherHourlyActionCreators,
 }

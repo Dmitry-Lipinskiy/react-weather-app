@@ -1,4 +1,3 @@
-import { IListForecast, IWeatherFiveDays } from "../../components/weather/IWeatherFiveDays";
 import { WeatherFiveDaysAction, WeatherFiveDaysActionType, WeatherFiveDaysState } from "../types/weatherFiveDays";
 
 const initialState: WeatherFiveDaysState = {
