@@ -50,7 +50,9 @@ const WeatherToday = () => {
           </div>
         </div>
         :
-        <Spinner/>
+        <div className='weather-today-spinner'>
+          <Spinner/>
+        </div>
       }
     </>
   )

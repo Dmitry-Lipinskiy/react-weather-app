@@ -33,16 +33,17 @@
 }
 
 .forecast-date {
-  /* color: dimgrey; */
   padding-top: 10px;
 }
 
 .forecast-temperature {
-  /* color: dimgrey; */
   font-size: 30px;
 }
 
 .forecast-description {
-  /* color: dimgrey; */
   padding-top: 10px;
+}
+
+.weather-five-days-spinner {
+  margin-top: 100px;
 }

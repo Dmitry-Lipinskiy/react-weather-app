@@ -1,5 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
-import Context from '../../context/context';
+import React, { useEffect, useState } from 'react';
 import { useActions } from '../../hooks/useActions';
 import './header.css';
 
@@ -8,11 +7,10 @@ let city: any = "Minsk";
 const Header = () => {
 
   const [value, setValue] = useState('');
-  const { isError } = useContext(Context);
  
   const {getWeatherToday} = useActions();
   const {getWeatherFiveDays} = useActions();
-
+  
   useEffect(() => {
     getWeatherFiveDays(city)
   }, []);

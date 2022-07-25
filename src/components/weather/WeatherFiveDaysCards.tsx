@@ -46,7 +46,9 @@ const WeatherFiveDaysCards = (
             </div>
           ))
           :
-          <Spinner/>           
+          <div className="weather-five-days-spinner">
+            <Spinner/> 
+          </div>          
         }  
       </div>
     </>

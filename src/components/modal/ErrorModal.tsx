@@ -1,12 +1,8 @@
-import React, { Dispatch, SetStateAction } from 'react';
-import { useTypedSelector } from '../../hooks/useTypedSelectors';
+import React, { useState } from 'react';
 
-const ErrorModal = (
-  {openErrorModal, setOpenErrorModal}: 
-  {openErrorModal: boolean, setOpenErrorModal: Dispatch<SetStateAction<boolean>>}
-) => {
+const ErrorModal = () => {
 
-  // const {err} = useTypedSelector(state => state.err);
+  const [openErrorModal, setOpenErrorModal] = useState(false);
 
   return (
     <div className={`modal ${openErrorModal && 'd-block'}`}>
@@ -23,8 +19,8 @@ const ErrorModal = (
           </div>
           <div className="modal-body">
             <div>Hello!</div>
-            {/* <div className="error-header">{err.response.data.cod}</div>
-            <div className="error-text">{err.response.data.message}</div> */}
+            {/* <div className="error-header">{error.response.data.cod}</div>
+            <div className="error-text">{error.response.data.message}</div> */}
           </div>
           <div className="modal-footer">
             <button type="button" 
