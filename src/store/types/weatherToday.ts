@@ -1,7 +1,7 @@
-import { IWeatherToday } from "../../components/weather/IWeatherToday";
+import { IWeatherToday } from '../../components/weather/IWeatherToday';
 
 export interface WeatherTodayState {
-  today: IWeatherToday,
+  today: IWeatherToday;
 }
 
 export enum WeatherTodayActionType {

@@ -1,11 +1,11 @@
-import { IListForecast } from "../../components/weather/IWeatherFiveDays";
+import { IListForecast } from '../../components/weather/IWeatherFiveDays';
 
 export interface WeatherFiveDaysState {
   days: IListForecast[];
 }
 
 export enum WeatherFiveDaysActionType {
-  GET_WEATHER_FIVE_DAYS = 'GET_WEATHER_FIVE_DAYS'
+  GET_WEATHER_FIVE_DAYS = 'GET_WEATHER_FIVE_DAYS',
 }
 
 interface GetWeatherFiveDaysAction {

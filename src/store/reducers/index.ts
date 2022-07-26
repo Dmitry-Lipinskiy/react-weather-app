@@ -1,7 +1,7 @@
-import { combineReducers } from "redux";
-import { weatherFiveDaysReducer } from "./weatherFiveDaysReducer";
-import { weatherHourlyReducer } from "./weatherHourlyReducer";
-import { weatherTodayReducer } from "./weatherTodayReducer";
+import { combineReducers } from 'redux';
+import { weatherFiveDaysReducer } from './weatherFiveDaysReducer';
+import { weatherHourlyReducer } from './weatherHourlyReducer';
+import { weatherTodayReducer } from './weatherTodayReducer';
 
 export const rootReducer = combineReducers({
   today: weatherTodayReducer,
@@ -9,4 +9,4 @@ export const rootReducer = combineReducers({
   weatherHourly: weatherHourlyReducer,
 });
 
-export type RootState = ReturnType<typeof rootReducer>
+export type RootState = ReturnType<typeof rootReducer>;

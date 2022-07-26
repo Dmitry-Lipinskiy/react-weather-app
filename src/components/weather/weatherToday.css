@@ -24,7 +24,6 @@
 .weather-today-container-info {
   width: 100%;
   padding: 20px 0;
-  /* color: dimgrey; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -37,7 +36,6 @@
 }
 
 .info-air-temperature {
-  /* color: dimgrey; */
   font-size: 50px;
   margin-bottom: 20px;
 }

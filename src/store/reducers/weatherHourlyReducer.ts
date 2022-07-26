@@ -1,14 +1,21 @@
-import { WeatherHourlyAction, WeatherHourlyActionType, WeatherHourlyState } from "../types/weatherHourly";
+import {
+  WeatherHourlyAction,
+  WeatherHourlyActionType,
+  WeatherHourlyState,
+} from '../types/weatherHourly';
 
 const initialState: WeatherHourlyState = {
-  weatherHourly: []
-}
+  weatherHourly: [],
+};
 
-export const weatherHourlyReducer = (state = initialState, action: WeatherHourlyAction): WeatherHourlyState => {
+export const weatherHourlyReducer = (
+  state = initialState,
+  action: WeatherHourlyAction
+): WeatherHourlyState => {
   switch (action.type) {
     case WeatherHourlyActionType.GET_WEATHER_HOURLY:
-      return {weatherHourly: action.payload}
-    default: 
+      return { weatherHourly: action.payload };
+    default:
       return state;
   }
 };
