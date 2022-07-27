@@ -19,12 +19,8 @@ export const getWeatherToday = (city: any) => {
           type: WeatherTodayActionType.GET_WEATHER_TODAY,
           payload: response.data,
         });
-        console.log(response.data);
+        // console.log(response.data);
       })
-      .catch((error) =>
-        alert(
-          `Error ${error.response.data.cod}: ${error.response.data.message}`
-        )
-      );
+      .catch((error) => console.log(error));
   };
 };

@@ -5,10 +5,12 @@ import './header.css';
 let city: any = 'Minsk';
 
 const Header = () => {
+
   const [value, setValue] = useState('');
 
   const { getWeatherToday } = useActions();
   const { getWeatherFiveDays } = useActions();
+  const { getCityError } = useActions();
 
   useEffect(() => {
     getWeatherFiveDays(city);
@@ -32,7 +34,7 @@ const Header = () => {
         <button
           type="button"
           className="btn"
-          onClick={() => (getWeatherToday(value), getWeatherFiveDays(value))}
+          onClick={() => (getWeatherToday(value), getWeatherFiveDays(value), getCityError(value))}
         >
           Search
         </button>

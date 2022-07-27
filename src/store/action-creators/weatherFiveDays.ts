@@ -17,8 +17,8 @@ export const getWeatherFiveDays = (city: any) => {
           type: WeatherFiveDaysActionType.GET_WEATHER_FIVE_DAYS,
           payload: response.data.list,
         });
-        console.log(response.data.list);
+        // console.log(response.data.list);
       })
-      .catch((err) => console.log(err.response.data));
+      .catch((error) => console.log(error));
   };
 };
