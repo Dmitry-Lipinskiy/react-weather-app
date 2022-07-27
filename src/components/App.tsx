@@ -4,13 +4,21 @@ import './App.css';
 import AppRoutes from './router/AppRoutes';
 import Header from './header/Header';
 import NavBar from './navBar/NavBar';
+import ErrorAlert from './alert/ErrorAlert';
+import { useTypedSelector } from '../hooks/useTypedSelectors';
 
 function App() {
+  const { isError } = useTypedSelector((state) => state.isError);
+  console.log(isError);
+  
   return (
     <BrowserRouter>
       <div className="App">
         <Header />
         <NavBar />
+        { isError &&
+          <ErrorAlert />
+        }
         <AppRoutes />
       </div>
     </BrowserRouter>

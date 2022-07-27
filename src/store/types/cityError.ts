@@ -1,5 +1,7 @@
+import { IError } from '../../components/alert/IError';
+
 export interface CityErrorState {
-  errorMessage: {};
+  errorMessage: IError;
 }
 
 export enum CityErrorActionType {
@@ -8,7 +10,7 @@ export enum CityErrorActionType {
 
 interface GetErrorMessageAction {
   type: CityErrorActionType.GET_ERROR_MESSAGE;
-  payload: {};
+  payload: IError;
 }
 
 export type CityErrorAction = GetErrorMessageAction;

@@ -1,3 +1,4 @@
+import { IError } from '../../components/alert/IError';
 import {
   CityErrorAction,
   CityErrorActionType,
@@ -5,7 +6,7 @@ import {
 } from '../types/cityError';
 
 const initialState: CityErrorState = {
-  errorMessage: <any>{},
+  errorMessage: <IError>{},
 };
 
 export const cityErrorReducer = (

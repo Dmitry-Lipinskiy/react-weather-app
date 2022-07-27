@@ -7,9 +7,6 @@ import './weatherToday.css';
 const WeatherToday = () => {
   const { today } = useTypedSelector((state) => state.today);
 
-  const { errorMessage } = useTypedSelector((state) => state.errorMessage);
-  console.log(errorMessage);
-
   const weatherIcon = (icon: string) => {
     return `http://openweathermap.org/img/wn/${icon}@2x.png`;
   };
