@@ -9,6 +9,7 @@ const ModalWeatherHourly = ({
   openWeatherHourlyModal: boolean;
   setOpenWeatherHourlyModal: Dispatch<SetStateAction<boolean>>;
 }) => {
+  
   return (
     <div className={`modal ${openWeatherHourlyModal && 'd-block'}`}>
       <div className="modal-dialog modal-fullscreen">

@@ -9,7 +9,6 @@ import { useTypedSelector } from '../hooks/useTypedSelectors';
 
 function App() {
   const { isError } = useTypedSelector((state) => state.isError);
-  console.log(isError);
   
   return (
     <BrowserRouter>

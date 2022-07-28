@@ -4,10 +4,9 @@ import './errorAlert.css';
 
 const ErrorAlert = () => {
   const { errorMessage } = useTypedSelector((state) => state.errorMessage);
-  console.log(errorMessage);
 
   return (
-    <div className="alert alert-warning" role="alert">
+    <div className="alert alert-danger" role="alert">
       Error {errorMessage.response.data.cod}:{' '}
       {errorMessage.response.data.message}
     </div>

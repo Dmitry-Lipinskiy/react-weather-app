@@ -27,7 +27,7 @@ const WeatherFiveDaysCards = ({
     if (fiveDaysInfo.length > 5) {
       fiveDaysInfo.pop();
     }
-    console.log(fiveDaysInfo);
+    // console.log(fiveDaysInfo);
     return fiveDaysInfo;
   };
 

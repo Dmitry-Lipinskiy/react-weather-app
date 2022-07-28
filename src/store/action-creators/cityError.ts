@@ -15,7 +15,7 @@ export const getCityError = (city: any) => {
       )
       .then((response) => {
         errorMessage = <IError>{};
-        console.log(errorMessage);
+        // console.log(errorMessage);
       })
       .catch((error) => {
         errorMessage = error;
@@ -23,7 +23,7 @@ export const getCityError = (city: any) => {
           type: CityErrorActionType.GET_ERROR_MESSAGE,
           payload: errorMessage,
         });
-        console.log(errorMessage);
+        // console.log(errorMessage);
       });
   };
 };

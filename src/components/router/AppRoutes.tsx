@@ -4,6 +4,7 @@ import FiveDays from '../../pages/FiveDays';
 import Today from '../../pages/Today';
 
 const AppRoutes = () => {
+  
   return (
     <Routes>
       <Route path="today" element={<Today />} />

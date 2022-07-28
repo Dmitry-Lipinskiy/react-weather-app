@@ -17,6 +17,6 @@ export const showWeatherHourly = (day: any, days: IListForecast[]) => {
       type: WeatherHourlyActionType.GET_WEATHER_HOURLY,
       payload: weatherHourly,
     });
-    console.log(weatherHourly);
+    // console.log(weatherHourly);
   };
 };

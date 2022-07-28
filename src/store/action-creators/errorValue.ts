@@ -14,11 +14,11 @@ export const getErrorValue = (city: any) => {
       )
       .then((response) => {
         isError = false;
-        console.log(isError);
+        // console.log(isError);
       })
       .catch((error) => {
         isError = true;
-        console.log(isError);
+        // console.log(isError);
       });
     dispatch({
       type: ErrorValueActionType.GET_ERROR_VALUE,
@@ -29,6 +29,6 @@ export const getErrorValue = (city: any) => {
         type: ErrorValueActionType.GET_ERROR_VALUE,
         payload: false,
       });
-    }, 2500);
+    }, 3000);
   };
 };
