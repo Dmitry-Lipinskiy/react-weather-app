@@ -12,12 +12,17 @@ const WeatherHourly = () => {
 
   return (
     <div className="container-weather-hourly">
+      {weatherHourly?.[0] && (
+        <h4 className="hourly-title">
+          {moment(weatherHourly[0].dt * 1000 - 3 * 3600 * 1000).format(
+            'MMM DD dddd'
+          )}
+        </h4>
+      )}
       <div className="container-weather-hourly-info">
         {weatherHourly?.[0] && (
           <div className="block-weather-hourly-info-name">
-            <div>
-              {moment(weatherHourly[0].dt * 1000 - 3 * 3600 * 1000).format('dddd')}
-            </div>
+            <div>Time</div>
             <img
               className="zero-image"
               src={weatherIcon(weatherHourly[0].weather[0].icon)}

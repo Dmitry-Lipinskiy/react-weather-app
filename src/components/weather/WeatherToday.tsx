@@ -17,6 +17,7 @@ const WeatherToday = () => {
         <div className="weather-today-container">
           <div className="weather-today-container-header">
             <h4>CURRENT WEATHER</h4>
+            <h4>{today.name}</h4>
             <h4>{moment(today.dt * 1000).format('DD.MM.YYYY')}</h4>
           </div>
           <div className="weather-today-container-info">
