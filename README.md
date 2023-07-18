@@ -4,7 +4,7 @@ When you click on one of the blocks of five days - shows the weather of this day
 You can enter any city in the search bar, and when you click on the "search" button, the data will be updated. 
 If you enter a non-existent city, then an error message will appear on the screen, which will notify the user about this, 
 and will disappear automatically after three seconds.
-You can view the result in a browser using this link:
+You can view the result in a browser using this link: https://dmitry-lipinskiy.github.io/react-weather-app/
 
 # Getting Started with Create React App
 
